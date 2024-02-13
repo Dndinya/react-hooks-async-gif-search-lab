@@ -12,7 +12,7 @@ class GifListContainer extends Component {
   }
 
   fetchGifs = (query = "cats") => {
-    fetch(`https://api.giphy.com/v1/gifs/search?q=YOUR QUERY HERE&api_key=dc6zaTOxFJmzC&rating=g`)
+    fetch(`https://api.giphy.com/v1/gifs/search?q=YOUR QUERY HERE&api_key=SH2PMpLuprYJJqdfQpYmevlwAFH1cmg9`)
       .then(response => response.json())
       .then(({ data }) => {
         this.setState({ gifs: data.map(gif => ({ id: gif.id, url: gif.images.original.url })) });
